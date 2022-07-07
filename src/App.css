@@ -2,37 +2,176 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.intro {
+  margin-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.search-bar {
+  max-width: 30rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.aligned-search-bar {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+body {
+  background-color: slategray;
+  /* background-image: url(https://clipart.world/wp-content/uploads/2020/06/clouds-in-the-sky.jpg); */
+  background-image: url(/public/clouds-in-the-sky.jpg);
+  background-size: contain;
+  background-attachment: fixed;
+}
+@media screen and (max-width: 1040px) {
+    body{
+      background-image: url(/public/clouds-in-the-sky.jpg);
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+}
+.home-search-button{
+  text-decoration: none;
+  color: black;
+}
+.forcast-selector-dropdown{
+  text-decoration: none;
+  color: black;
+}
+
+.wx-card {
+  border-radius: 15px;
+  /* background-color: rgba(255, 217, 0, 0.827); */
+  /* background-color: gold; */
+  background: linear-gradient(90deg, gold 0%, orange 100%);
+  background-size: cover;
+  background-attachment: fixed; 
+  /* font-family:Verdana, Geneva, Tahoma, sans-serif */
+  font-family: 'Libre Baskerville', serif;
+}
+.card-font:hover {
+  font-size: 20px;
+}
+
+/* .carousel-card-up:hover{
+  top: -25px;
+} */
+.twoday-wx-card:hover {
+  top: -15px;
+  /* background-color: gold; */
+  background-color: rgba(112, 128, 144, 0.412);
+  /* background: repeating-linear-gradient(
+      45deg,
+      rgba(135, 207, 235, 0.447),
+      rgba(135, 207, 235, 0.447) 10px,
+      rgba(46, 175, 198, 0.456) 10px,
+      rgba(46, 175, 198, 0.456) 20px); */
+}
+
+ * {
+  font-family: 'Libre Baskerville', serif;
+} 
+.carousel-indicators {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0;
+  margin-right: 15%;
+  margin-bottom: -5rem;
+  margin-left: 15%;
+  list-style: none;
+  margin-top: 16em;
 }
 
-.App-link {
-  color: #61dafb;
+.row {
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card-title {
+  margin-top: 0.5rem;
+}
+
+.carousel-control-prev {
+  margin-left: -8em;
+}
+.carousel-control-prev-icon{
+  background-color: black;
+}
+.carousel-control-next {
+  
+  margin-right: -8em;
+}
+.carousel-control-next-icon{
+  background-color: black;
+}
+
+
+.search-bar {
+  height: 50px;
+  width: 50px;
+  border-style: none;
+  padding: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  padding-right: 40px;
+  color: rgb(255, 255, 255);
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAACGCAMAAABDoVCmAAAAZlBMVEX///8AAADh4eH29vb5+fno6Oh0dHTs7Ozc3NzLy8uCgoK6urqzs7NwcHDFxcXQ0NCpqak1NTVhYWFZWVkjIyOKiooQEBBMTEyRkZGjo6NFRUU+Pj4dHR1nZ2cXFxfW1tYsLCyampqo7qlXAAAC1ElEQVR4nO2a2ZaqMBBFm4RBBhlkFLXV///JiwlRVCC5L6F6rbMfIQ/H4qSqUvHnBwAAAAAAAAAAAAAAAAAAAADwp+DeLkzTjAVbCzGFX4/+qXEE5zKKva0F6XGTS+W80dfXrUWtw5OT803j77YWtkJ4mZH84NZtLW2RuFnQPLCnaW03eios/HuSpmmcd+3T4Ldsa4Fz1EpemTCuHgZZ/Ts+PtFT7SrNZfjxhnc3+aYipzofNXcz9SRrx+RHrNaE0gTndPYt98fd6FqWtQovpQHmNQ/vx02aWFWl4Sg1rZj2INMKocQXyK22VkGY9PXRmiYtchdeVvdZKta0ZEIdCEc3mr5IbsbcjiQ9oSjfpWZVJkNtRZEBnZCzlDkU7l4s45plthD9RaGtHNL5sQ1FBggxtXYZq3QpxiKeYTLj4oDg06iKIpk1OksPphZHhAONBiQRXYfBQTAilKnFBqsMjoEiy/Q0RBtHuiYU6fih5fez959B1MSShqevhl2n7F8vNKqLK0TfteuC4rEusqDIBMcsgmlDqWOSDT7TLZMtCpVhU2xUxz15UrCiyABWmHRM8khGxdJqtrS+FZkI9JnO7EP299Vaqh5/GJF2STCetVdW5HI4aVCCrMHOQtJ+Me3Jb0HH0YK7s6o6Hcd5tO4ExgOgU86m4XGWM7R42mRuFZn2Bl9/VzzmO09KWqp36raljacJm+/qt/uBikZnqsieQ/+2TqVLHrdzhfMOtVgfXtLOt1PfF9Wv8w0xX7vR4k3R9G6xJaZazfw/aO6soKt66PgOX5Yo6sHhbOIdp6fSnyp4VvdTXxxyGVdv+hHIxXrQzdJj5O/3fpdcX+lPDoRV9OmpFnz1c9RjPU8w9fVpazWmvMX6r4T6zddUjuV6vNefK6hM1w3gz3y4tZL/QcWa0I2iAcGjQylyQidcI7zwSmN0CgAAAAAAAAAAAAAAAAAAAABY5B+bTBkGgqfEmgAAAABJRU5ErkJggg==);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: none;
+
+}
+
+.carousel-indicator {
+  size: 45px;
+}
+
+.search-bar-input {
+  border: none;
+  display: none;
+  font-family: 'Libre Baskerville', serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.search-bar:hover .search-bar-input {
+  display: inline;
+  margin-right: .5em;
+}
+
+.search-bar:hover {
+  background-image: none;
+  background-color: rgba(42, 79, 182, 0.609);
+}
+
+.search-bar-button {
+  display: none;
+}
+
+
+.search-bar:hover {
+  width: 300px;
+  border-radius: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, .5);
+  transition: all 900ms cubic-bezier(0, 0.110, 0.35, 2);
+  height: 3em;
+
+}
+
+.search-bar:hover .search-bar-button {
+  display: inline;
+  margin-left: 2rem;
+  border: none;
+  background-color: grey;
 }
