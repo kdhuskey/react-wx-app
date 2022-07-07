@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Col, Container, Row } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import WeekendCard from './WeekendCard'
@@ -6,7 +6,7 @@ import WeekendCard from './WeekendCard'
 function WeekendResults(props) {
   
   const wxData = useSelector(state => state.search.weatherData)
-  const city = useSelector(state => state.search.foundCity )
+  // const city = useSelector(state => state.search.foundCity )
   
   if(!wxData){
     return null

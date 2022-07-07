@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import Weekend from '../components/Weekend'
 
 function Threeday() {
-  const city = useSelector(state => state.search.foundCity )
+  // const city = useSelector(state => state.search.foundCity )
   return (
     <div>
         <Weekend/>

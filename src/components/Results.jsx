@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Carousel, CarouselItem, Col, Container, Row } from 'react-bootstrap'
 import { useSelector } from 'react-redux'
 import WxCard from './WxCard'
@@ -7,7 +7,7 @@ import '../App.css'
 function Results(props) {
   
   const wxData = useSelector(state => state.search.weatherData)
-  const city = useSelector(state => state.search.foundCity )
+  // const city = useSelector(state => state.search.foundCity )
   
   if(!wxData){
     return null

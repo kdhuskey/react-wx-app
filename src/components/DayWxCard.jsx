@@ -1,15 +1,15 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
-import { useDispatch } from 'react-redux'
+// import { useDispatch } from 'react-redux'
 import '../App.css'
-import { startSearch } from '../redux/actions'
+// import { startSearch } from '../redux/actions'
 
 function DayWxCard({ text }) {
     const cloudIcon = text.weather[0].icon
-    const dispatch = useDispatch()
-    const handleAdd = (text) => {
-        dispatch(startSearch(text))
-    }
+    // const dispatch = useDispatch()
+    // const handleAdd = (text) => {
+    //     dispatch(startSearch(text))
+    // }
     const isHourly = typeof text.temp === 'number' ? true : false
     const currentDate = new Date(text.dt * 1000)
     const currentDay = currentDate.toLocaleString(`en-us`, { weekday: `long` })

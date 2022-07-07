@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Button, Col, Container, Form, FormControl, InputGroup, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { search, setResults, startSearch } from '../redux/actions'
-import Home from '../routes/Home'
+import { startSearch } from '../redux/actions'
+// import Home from '../routes/Home'
 import '../App.css'
 
 function SearchBar(props) {
